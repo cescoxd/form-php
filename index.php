@@ -8,10 +8,14 @@
 </head>
 <body>
     <h1>Formulario para enviar datos</h1>
-    <form action="view/mostrar.php" method="post">
-        <input type="text" name="nombre" placeholder="Inserte nombre...">
-        <input type="password" name="pwd" placeholder="inserte contraseña">
+    <form action="proc/resproc.php" method="post">
+        <input type="text" name="Pokemon" placeholder="Inserte Pokemon...">
         <input type="submit">
     </form>
+    <?php
+    if (isset($_GET['msg'])) {
+        echo '<p>Intenta con el pokemon #' $_GET['msg'].'</p>';
+    }
+    ?>
 </body>
 </html>
